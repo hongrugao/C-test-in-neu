@@ -7,7 +7,6 @@ int Fib2(int x);
 int Fib3(int x);
 int Fib4(int x,int ,int );
 int Fib5(int a,int b,int p,int q,int x);
-
 int main()
 {
 	int a;
@@ -16,7 +15,7 @@ int main()
 	
  } 
 
-int Fib1(int x)     //递归，时间复杂度为O(2^n),空间复杂度O(n) 
+int Fib1(int x)     //閫掑綊锛屾椂闂村鏉傚害涓篛(2^n),绌洪棿澶嶆潅搴(n) 
 {
 	if(x==1||x==2)
 		return 1;
@@ -26,7 +25,7 @@ int Fib1(int x)     //递归，时间复杂度为O(2^n),空间复杂度O(n)
 		return Fib1(x-1)+Fib1(x-2);	
 }
 
-int Fib2(int x)      //利用数组记录了前两项的值，时间复杂度为O(n),空间复杂度O(n)
+int Fib2(int x)      //鍒╃敤鏁扮粍璁板綍浜嗗墠涓ら」鐨勫�硷紝鏃堕棿澶嶆潅搴︿负O(n),绌洪棿澶嶆潅搴(n)
 {
 	int *a= new int[x-1];
 	a[0]=1;
@@ -38,7 +37,7 @@ int Fib2(int x)      //利用数组记录了前两项的值，时间复杂度为O(n),空间复杂度O(n)
 	return a[x-1];	
 }
 
-int Fib3(int x)      //迭代法，时间复杂度为O(n),空间复杂度O(1)
+int Fib3(int x)      //杩唬娉曪紝鏃堕棿澶嶆潅搴︿负O(n),绌洪棿澶嶆潅搴(1)
 {
 	if(x==1||x==2)
 		return 1;
@@ -56,7 +55,7 @@ int Fib3(int x)      //迭代法，时间复杂度为O(n),空间复杂度O(1)
 	return s2; 
 }
 
-int Fib4(int x,int a,int b)     //a=1,b=0,时间复杂度为O(n),空间复杂度O(1)
+int Fib4(int x,int a,int b)     //a=1,b=0,鏃堕棿澶嶆潅搴︿负O(n),绌洪棿澶嶆潅搴(1)
 {
 	if(x==1)
 	{
@@ -65,7 +64,7 @@ int Fib4(int x,int a,int b)     //a=1,b=0,时间复杂度为O(n),空间复杂度O(1)
 	return Fib4(x-1,a+b,a);
 }
 
-int Fib5(int a,int b,int p,int q,int x)      //a=1,b=0,p=0,q=1,时间复杂度为O(logn)
+int Fib5(int a,int b,int p,int q,int x)      //a=1,b=0,p=0,q=1,鏃堕棿澶嶆潅搴︿负O(logn)
 {
     if (x == 0)
         return b;
