@@ -38,6 +38,6 @@ int main()
 	a[0][1]=1;
 	a[1][0]=1;
 	a[1][1]=0;
-	int **p = matrix_fast(a,n-1);     //¾ØÕóµÄn-1´ÎÃİ 
+	int **p = matrix_fast(a,n-1);     //n-1ä¸ªçŸ©é˜µç›¸ä¹˜
 	printf("%d",p[0][0]);
 }
